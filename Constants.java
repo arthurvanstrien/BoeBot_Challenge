@@ -14,5 +14,7 @@ public final class Constants
    public static final int LINE_DETECTOR_MIDDLE = 1;
    public static final int LINE_DETECTOR_RIGHT = 2;
    
-   //
+   //Constants for the servo engines:
+   public static final int ENGINE_LEFT = 12;
+   public static final int ENGINE_RIGHT = 13;
 }
