@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LineDetection()
+comment1.params=
+comment1.target=boolean\ leftBlack()
+comment2.params=
+comment2.target=boolean\ middleBlack()
+comment3.params=
+comment3.target=boolean\ rightBlack()
+numComments=4
