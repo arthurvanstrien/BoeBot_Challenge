@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=
-comment0.target=LineDetection()
+comment0.target=LineDetectors()
 comment1.params=
 comment1.target=boolean\ leftBlack()
 comment2.params=

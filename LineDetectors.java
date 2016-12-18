@@ -6,9 +6,9 @@ import TI.*;
  * @version (1)
  * @date    ()
  */
-public class LineDetection
+public class LineDetectors
 {
-    public LineDetection()
+    public LineDetectors()
     {
         
     }
