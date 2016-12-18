@@ -10,6 +10,11 @@ public class Main
 {
     public static void main(String[] args)
     {
+        LineFollower lineFollower = new LineFollower();
         
+        while(true)
+        {
+            lineFollower.followLine();
+        }
     }
 }
