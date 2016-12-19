@@ -9,7 +9,7 @@
 public final class Constants
 {
    //Contants for line detection:
-   public static final int LINE_TRIGGER = 500;
+   public static final int LINE_TRIGGER = 400;
    public static final int LINE_DETECTOR_LEFT = 0;
    public static final int LINE_DETECTOR_MIDDLE = 1;
    public static final int LINE_DETECTOR_RIGHT = 2;
@@ -17,4 +17,7 @@ public final class Constants
    //Constants for the servo engines:
    public static final int ENGINE_LEFT = 12;
    public static final int ENGINE_RIGHT = 13;
+   
+   //Constants for the line following:
+   public static final int LINE_STEP = 5; //Correct??
 }
