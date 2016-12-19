@@ -22,43 +22,62 @@ public class LineFollower
     }
     
     public void followLine()
-    {   
+    {  
+        //Turn Right
         if(lineDetectors.leftBlack() == true && lineDetectors.rightBlack() == false)
         {
+            /*
             left = 0;
-            right = right + 2;
+            right = right + Constants.LINE_STEP;
             drive.right(right);
+            */
+           
+            drive.right(180);
         }
-        else if(lineDetectors.rightBlack() == false && lineDetectors.rightBlack() == true)
+        //Turn Left
+        else if(lineDetectors.leftBlack() == false && lineDetectors.rightBlack() == true)
         {
+            /*
             right = 0;
-            left = left + 2;
+            left = left + Constants.LINE_STEP;
             drive.left(left);
+            */
+           
+            drive.left(180);
         }
+        //Drive Straight
         else if(lineDetectors.rightBlack() == false && lineDetectors.leftBlack() == false && lineDetectors.middleBlack() == true)
-        {
+        {   
+            /*
             if(left > 0)
             {
-                left = left - 2;
+                left = left - Constants.LINE_STEP;
                 drive.left(left);
             }
             else if(right > 0)
             {
-                right = right - 2;
+                right = right - Constants.LINE_STEP;
                 drive.right(right);
             }
             else
             {
                 drive.forward();
             }
+            */
+            drive.forward();
         }
+        //Crossing detected
         else if(lineDetectors.rightBlack() == true && lineDetectors.leftBlack() == true && lineDetectors.middleBlack() == true)
         {
-            //Crossing
+            /*
+            drive.stop();
+            */
+            drive.stop();
         }
+        //Other condition, possibly all sensors white.
         else
         {
-            drive.stop();
+            //drive.stop();
         }
     }
 }
