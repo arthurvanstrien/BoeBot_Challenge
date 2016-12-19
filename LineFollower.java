@@ -37,7 +37,20 @@ public class LineFollower
         }
         else if(lineDetectors.rightBlack() == false && lineDetectors.leftBlack() == false && lineDetectors.middleBlack() == true)
         {
-            drive.forward();
+            if(left > 0)
+            {
+                left = left - 2;
+                drive.left(left);
+            }
+            else if(right > 0)
+            {
+                right = right - 2;
+                drive.right(right);
+            }
+            else
+            {
+                drive.forward();
+            }
         }
         else if(lineDetectors.rightBlack() == true && lineDetectors.leftBlack() == true && lineDetectors.middleBlack() == true)
         {

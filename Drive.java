@@ -48,48 +48,24 @@ public class Drive
     }
     
     public void right(int slowDown)
-    {
-        int slowDownRight = 0;
-        int slowDownLeft = 0;
-        
-        if(slowDown < 200 && slowDown > 0)
+    {        
+        if(slowDown > 400)
         {
-            slowDownRight = slowDown;
-        }
-        else if(slowDown > 200 && slowDown < 400)
-        {
-            slowDownRight = 200;
-            slowDownLeft = slowDown - 200;
-        }
-        else
-        {
-            slowDownRight = 200;
+            slowDown = 400;
         }
         
-        leftEngine.update((1300 + slowDownLeft));
-        rightEngine.update((1700 - slowDownRight));
+        leftEngine.update((1300));
+        rightEngine.update((1700 - slowDown));
     }
     
     public void left(int slowDown)
-    {
-        int slowDownLeft = 0;
-        int slowDownRight = 0;
-        
-         if(slowDown < 200 && slowDown > 0)
+    {   
+        if(slowDown > 400)
         {
-            slowDownLeft = slowDown;
-        }
-        else if(slowDown > 200 && slowDown < 400)
-        {
-            slowDownLeft = 200;
-            slowDownRight = slowDown - 200;
-        }
-        else
-        {
-            slowDownLeft = 200;
+            slowDown = 400;
         }
         
-        leftEngine.update((1300 + slowDownLeft));
-        rightEngine.update((1700 - slowDownRight));
+        leftEngine.update((1300 + slowDown));
+        rightEngine.update((1700));
     }
 }
