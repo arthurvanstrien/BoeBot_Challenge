@@ -1,4 +1,4 @@
-
+import TI.*;
 /**
  * Write a description of class Main here.
  * 
@@ -15,6 +15,7 @@ public class Main
         while(true)
         {
             lineFollower.followLine();
+            BoeBot.wait(2);
         }
     }
 }
